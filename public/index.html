@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaddu's Network - Game Server Hosting</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-emoji">🦕</span>
+                <span class="nav-title">Yaddu's Network</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/hosting" class="nav-link">Game Hosting</a>
+                <a href="/minecraft" class="nav-link">Minecraft</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/plugins" class="nav-link">Plugins</a>
+                <a href="/ranks" class="nav-link">Server Ranks</a>
+                <a href="/crates" class="nav-link">Mystery Crates</a>
+                <a href="/addons" class="nav-link">Add-ons</a>
+                <a href="/control" class="nav-link">Control Panel</a>
+                <a href="/pricing" class="nav-link">Pricing</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="auth-btn" id="authBtn">Login</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="stars-bg" id="starsBg"></div>
+        <div class="nebula-effects">
+            <div class="nebula-1"></div>
+            <div class="nebula-2"></div>
+            <div class="nebula-3"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Yaddu's Network</h1>
+            <p class="hero-subtitle">
+                Experience the cosmos of game server hosting with our stellar infrastructure and prehistoric reliability
+            </p>
+            <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>All Systems Operational • 99.9% Uptime</span>
+            </div>
+            <div class="get-started-menu">
+                <button class="get-started-btn" id="getStartedBtn">
+                    Get Started
+                    <span class="chevron">▼</span>
+                </button>
+                <div class="get-started-dropdown" id="getStartedDropdown">
+                    <h3>Choose Your Adventure</h3>
+                    <a href="/minecraft" class="dropdown-item">
+                        <span class="item-emoji">🏗️</span>
+                        <div class="item-content">
+                            <div class="item-title">Minecraft Stuff</div>
+                            <div class="item-desc">Servers, mods, worlds & more</div>
+                        </div>
+                    </a>
+                    <a href="/resources" class="dropdown-item">
+                        <span class="item-emoji">📦</span>
+                        <div class="item-content">
+                            <div class="item-title">Resources</div>
+                            <div class="item-desc">Texture packs, builds & templates</div>
+                        </div>
+                    </a>
+                    <a href="/plugins" class="dropdown-item">
+                        <span class="item-emoji">🔧</span>
+                        <div class="item-content">
+                            <div class="item-title">Plugins</div>
+                            <div class="item-desc">Essential & custom plugins</div>
+                        </div>
+                    </a>
+                    <a href="/ranks" class="dropdown-item">
+                        <span class="item-emoji">👑</span>
+                        <div class="item-content">
+                            <div class="item-title">Server Ranks</div>
+                            <div class="item-desc">VIP ranks & permissions</div>
+                        </div>
+                    </a>
+                    <a href="/crates" class="dropdown-item">
+                        <span class="item-emoji">🎁</span>
+                        <div class="item-content">
+                            <div class="item-title">Mystery Crates</div>
+                            <div class="item-desc">Loot boxes & rewards</div>
+                        </div>
+                    </a>
+                    <a href="/pricing" class="dropdown-item pricing-item">
+                        View Hosting Plans
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Stellar Performance</h3>
+                    <p class="feature-desc">NVMe SSD arrays and enterprise-grade hardware deliver cosmic speeds across our global network</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Prehistoric Protection</h3>
+                    <p class="feature-desc">Military-grade DDoS protection and advanced security keep your servers safe from extinction</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3 class="feature-title">Multi-Game Support</h3>
+                    <p class="feature-desc">Minecraft, CS2, Rust, ARK, and 50+ games supported with one-click installations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Deployment</h3>
+                    <p class="feature-desc">Servers spin up in under 60 seconds with our automated pterodactyl panel integration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Access Modal -->
+    <div class="modal" id="adminModal">
+        <div class="modal-content">
+            <h3>🔐 Admin Access</h3>
+            <input type="password" id="adminCode" placeholder="Enter admin code" class="admin-input">
+            <div class="modal-actions">
+                <button class="btn btn-primary" id="adminLoginBtn">Login</button>
+                <button class="btn btn-secondary" id="adminCancelBtn">Cancel</button>
+            </div>
+            <p class="modal-hint">Press Esc to close</p>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal">
+            <div class="modal-header">
+                <h3>Your Cart</h3>
+                <button class="modal-close" id="cartModalClose">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated here -->
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <!-- Cart total and actions will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins - Yaddu's Network</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/plugins.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-emoji">🦕</span>
+                <span class="nav-title">Yaddu's Network</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/hosting" class="nav-link">Game Hosting</a>
+                <a href="/minecraft" class="nav-link">Minecraft</a>
+                <a href="/resources" class="nav-link">Resources</a>
+                <a href="/plugins" class="nav-link active">Plugins</a>
+                <a href="/ranks" class="nav-link">Server Ranks</a>
+                <a href="/crates" class="nav-link">Mystery Crates</a>
+                <a href="/addons" class="nav-link">Add-ons</a>
+                <a href="/control" class="nav-link">Control Panel</a>
+                <a href="/pricing" class="nav-link">Pricing</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="auth-btn" id="authBtn">Login</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">🔧 Plugin Repository</h1>
+                <p class="page-subtitle">Discover powerful plugins to enhance your Minecraft server</p>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search plugins by name, author, or features...">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <div class="search-results-info" id="searchResultsInfo">
+                    Loading plugins...
+                </div>
+            </div>
+        </section>
+
+        <!-- Plugins Grid -->
+        <section class="plugins-section">
+            <div class="container">
+                <div class="plugins-grid" id="pluginsGrid">
+                    <!-- Plugins will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content cart-modal">
+            <div class="modal-header">
+                <h3>Your Cart</h3>
+                <button class="modal-close" id="cartModalClose">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be populated here -->
+            </div>
+            <div class="cart-footer" id="cartFooter">
+                <!-- Cart total and actions will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/plugins.js"></script>
+</body>
+</html>
